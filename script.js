@@ -1,4 +1,5 @@
 // Sekme Geçişi
+//Routing yapısına hakim olunmadığından script içersinde yönlenmeler gerçekleştirildi
 function showSection(section) {
     const sections = document.querySelectorAll('.section');
     sections.forEach(sec => (sec.style.display = 'none')); // Tüm bölümleri gizle
@@ -9,8 +10,8 @@ function showSection(section) {
     }
 }
 
-let storedPassword = "test123"; // Geçerli şifre
-const fileURL = "./2024-2025guz_lisansfinalprogrami.pdf"; // Yüklenen dosyanın proje içindeki göreceli yolu
+let storedPassword = "test123"; // Geçerli şifr
+const fileURL = "./2024-2025guz_lisansfinalprogrami.pdf"; göreceli yolu
 
 // Şifre Doğrulama
 function verifyPassword() {
@@ -64,6 +65,7 @@ function triggerFileInput() {
 }
 
 // Şifre Üretme
+//TODO: Back-End entegrasyonu sırasında JWT-Token ile bağlanacak
 function generatePassword() {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let password = '';
